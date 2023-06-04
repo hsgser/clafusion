@@ -2,6 +2,8 @@ import copy
 import os
 import sys
 import time
+from basic_config import PATH_TO_CIFAR, TMP_DATETIME_FILE
+sys.path.append(PATH_TO_CIFAR)
 
 import baseline
 import numpy as np
@@ -13,13 +15,9 @@ import train as cifar_train
 import utils
 import wasserstein_ensemble
 from align_layers import align_two_data_separated_models
-from basic_config import PATH_TO_CIFAR, TMP_DATETIME_FILE
 from data import get_dataloader
 from log import logger
 from tensorboardX import SummaryWriter
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 if __name__ == "__main__":

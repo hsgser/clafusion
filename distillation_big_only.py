@@ -1,6 +1,8 @@
 import copy
 import os
 import sys
+from basic_config import PATH_TO_CIFAR, TMP_DATETIME_FILE
+sys.path.append(PATH_TO_CIFAR)
 
 import baseline
 import numpy as np
@@ -13,14 +15,10 @@ import torch.optim as optim
 import train as cifar_train
 import utils
 import wasserstein_ensemble
-from basic_config import PATH_TO_CIFAR, TMP_DATETIME_FILE
 from data import get_dataloader
 from log import logger
 from model import get_model_from_name
 from tqdm import tqdm
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 def recheck_accuracy(args, models, test_loader):

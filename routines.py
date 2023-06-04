@@ -1,21 +1,19 @@
 import copy
 import os
 import sys
+from basic_config import PATH_TO_CIFAR
+sys.path.append(PATH_TO_CIFAR)
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
 import train as cifar_train
-from basic_config import PATH_TO_CIFAR
 from data import get_dataloader
 from log import logger
 from model import get_model_from_name
 from tqdm import tqdm
 from utils import _get_config, get_model_size, to_first_position
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 def get_trained_model(args, id, random_seed, train_loader, test_loader):

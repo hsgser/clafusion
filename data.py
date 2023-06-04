@@ -1,14 +1,12 @@
 import sys
+from basic_config import PATH_TO_CIFAR
+sys.path.append(PATH_TO_CIFAR)
 
 import numpy as np
 import torch
 import train as cifar_train
-from basic_config import PATH_TO_CIFAR
 from torch.utils.data.sampler import SubsetRandomSampler
 from torchvision import datasets, transforms
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 def get_inp_tar(dataset):

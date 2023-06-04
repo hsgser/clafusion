@@ -2,19 +2,17 @@ import collections
 import csv
 import os
 import pickle
+from basic_config import PATH_TO_CIFAR, PATH_TO_VGG
 import sys
-from itertools import chain
+sys.path.append(PATH_TO_CIFAR)
+sys.path.append(PATH_TO_VGG)
 
+from itertools import chain
 import partition
 import torch
 import train as cifar_train
 import vgg
-from basic_config import PATH_TO_CIFAR, PATH_TO_VGG
 from log import logger
-
-
-sys.path.append(PATH_TO_CIFAR)
-sys.path.append(PATH_TO_VGG)
 
 
 class dotdict(dict):

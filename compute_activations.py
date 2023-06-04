@@ -1,14 +1,12 @@
 import os
 import sys
+from basic_config import PATH_TO_CIFAR
+sys.path.append(PATH_TO_CIFAR)
 
 import torch
 import utils as myutils
-from basic_config import PATH_TO_CIFAR
 from log import logger
 from tqdm import tqdm
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 ensemble_root_dir = "./cifar_models/"

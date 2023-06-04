@@ -1,13 +1,11 @@
 import os
 import sys
+from basic_config import PATH_TO_CIFAR
+sys.path.append(PATH_TO_CIFAR)
 
 import hyperparameters.vgg11_cifar10_baseline as vgg_hyperparams
 import train as cifar_train
-from basic_config import PATH_TO_CIFAR
 from log import logger
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 exp_path = sys.argv[1]

@@ -1,12 +1,10 @@
 import sys
+from basic_config import PATH_TO_CIFAR
+sys.path.append(PATH_TO_CIFAR)
 
 import torch.nn as nn
 import torch.nn.functional as F
 import train as cifar_train
-from basic_config import PATH_TO_CIFAR
-
-
-sys.path.append(PATH_TO_CIFAR)
 
 
 def get_model_from_name(args, idx=0, model_name=None, model_config=None):
